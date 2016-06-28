@@ -1,4 +1,10 @@
 # KillShell
-KillShell A webshell Killer write by python
+KillShell is a webshell Killer write by python
 
-author:Jincon
+Think you!
+
+Author:Jincon
+
+Website:www.jincon.com
+
+Usage:Kill.py /home/wwwroot
