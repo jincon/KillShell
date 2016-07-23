@@ -17,15 +17,15 @@ def setIni(section,name,value):
     config.write(f)
     f.close
 
-def getIni(section,name=''):
+#def getIni(section,name=''):
     # a =  getIni('FILE_EXT');
     # print a[0][1]
 
-    config.read("config.ini")
-    if not name:
-        return config.items(section)
-    else:
-        return config.get(section, name)
+    # config.read("config.ini")
+    # if not name:
+    #     return config.items(section)
+    # else:
+    #     return config.get(section, name)
 
 
 plusarr=[] #插件列表
@@ -33,9 +33,15 @@ backdoor_count=0
 allfile=0
 
 
-exts = getIni('FILE_EXT','ext');
-fielsize = getIni('FILE_SIZE','size');
-version = getIni('FILE_VER','ver');
+# exts = getIni('FILE_EXT','ext');
+# fielsize = getIni('FILE_SIZE','size');
+# version = getIni('FILE_VER','ver');
+# config 很容易出现问题，直接在文件里面搞配置吧
+
+
+exts = "php,asp";       #多个之间使用英文逗号分隔
+fielsize = "500000";    #500kb
+version = "0.1.1";        #版本号
 
 
 
@@ -52,7 +58,7 @@ def loadplus():
 
 def Scan(path):
     loadplus() #动态加载插件
-    global backdoor_count
+    global backdoor_count,allfile
     for root,dirs,files in os.walk(path):
         for filename in files:
             file_ext = filename.split('.').pop();
@@ -103,7 +109,7 @@ if __name__ == "__main__":
     Ver     :  """+version+"""
     Author  :  Jincon
     Website :  http://www.jincon.com
-    Usage   :  Kill2.py Directory
+    Usage   :  Kill.py Directory
     """
     print '-----------------------------------------------\n'
 
