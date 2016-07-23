@@ -1,6 +1,6 @@
 # KillShell
 
-KillShell Is A Webshell Killer Write By Python
+KillShell Is A Webshell Killing Trojan Tool Write By Python
 
 If you find another Webshell Trojan, please send email to me, or leave a message, I will update the feature code
 
