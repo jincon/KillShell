@@ -6,7 +6,7 @@ import os
 #可疑加密文件，请注意甄别
 
 rule = r'(\\x65\\x76\\x61\\x6C\\x28\\x67\\x7A\\x75\\x6E\\x63\\x6F\\x6D\\x70\\x72\\x65\\x73\\x73.{0,15})';
-rule2 = r'(chr\(\d{1,3}\)\.chr\(\d{1,3}\)\.chr\(\d{1,3}\)\.chr\(\d{1,3}\)\)';
+rule2 = r'(chr\(\d{1,3}\)\.chr\(\d{1,3}\)\.chr\(\d{1,3}\)\.chr\(\d{1,3}\))';
 
 def Check(filestr,filepath):
 
